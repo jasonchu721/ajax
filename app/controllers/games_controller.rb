@@ -7,6 +7,11 @@ class GamesController < ApplicationController
   
   def show
   end
+
+  def form
+    @game = Game.new
+    render partial: 'form'
+  end  
   
   def create
     @game = Game.new(game_params)
